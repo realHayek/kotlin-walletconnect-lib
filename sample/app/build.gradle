@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion versions.compileSdk
@@ -19,8 +18,8 @@ android {
         versionName '1.0.0'
     }
 
-    dexOptions {
-        jumboMode = true
+    buildFeatures {
+        viewBinding true
     }
 
     lintOptions {
@@ -65,3 +64,5 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0'
 
 }
+
+task wrapper(type: Wrapper) { gradleVersion = '7.0.2' }

@@ -8,7 +8,7 @@ buildscript {
 
                 'minSdk'                  : 14,
                 'compileSdk'              : 28,
-                'buildTools'              : '28.0.3',
+                'buildTools'              : '30.0.2',
                 'androidPlugin'           : '3.4.0',
 
                 androidx_app_compat       : '1.0.2',
@@ -32,10 +32,13 @@ buildscript {
 
     repositories {
         gradlePluginPortal()
-	mavenCentral()
+        mavenCentral()
+        google()
+        jcenter()
     }
 
     dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.38.0'
         // How can we move this to the sample folder
